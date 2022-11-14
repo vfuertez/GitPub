@@ -8,7 +8,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/drinks', (request, response) => {
-    response.send(drinks)
+    response.render("drinks_index.ejs")
 })
 
 app.listen(PORT, (request, response) => {
