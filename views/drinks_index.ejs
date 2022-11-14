@@ -15,9 +15,16 @@ body {
     color:thistle
 }
 </style>
-<% for( items of allDrinks) { %>
-    <ul><%= items.name %> </ul>
-    <% } %>
+<ul>
+    <% for(let i = 0; i < allDrinks.length; i++){ %>
+    <% const drink = allDrinks[i] %>
+    <% const drinkName = drink.name %>
+    <% const capDrink = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
+      <li>
+         <a href="/drinks/<%=i %> "><%=capDrink %></a>
+      </li>
+     <%  } %> 
+  </ul>
 
 </body>
 </html>
