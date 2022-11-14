@@ -1,7 +1,13 @@
+const { response } = require('express');
 const express = require('express');
 const app = express();
 const drinks = require('./models/drinks')
-const PORT = 3000
+const PORT = 3000;
+
+
+app.get('/drinks/:id', (request, response) => {
+    response.send(request.params.id)
+})
 
 
 app.get('/drinks', (request, response) => {
