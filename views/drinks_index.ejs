@@ -26,5 +26,17 @@ body {
      <%  } %> 
   </ul>
 
+  <ul>
+    <% for(let i = 0; i < allFood.length; i++){ %>
+        <% const food = allFood[i] %>
+        <% const foodName = food.name %>
+        <% const capFood = foodName.charAt(0).toUpperCase() + foodName.slice(1) %>
+          <li>
+             <a href="/food/<%=i %> "><%=capFood %></a>
+          </li>
+         <%  } %> 
+
+  </ul>
+
 </body>
 </html>

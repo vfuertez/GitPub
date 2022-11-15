@@ -2,7 +2,9 @@ const { response } = require('express');
 const express = require('express');
 const app = express();
 const drinks = require('./models/drinks')
+const food = require('./models/food')
 const PORT = 3000;
+
 
 
 app.get('/drinks/:id', (request, response) => {
@@ -11,8 +13,9 @@ app.get('/drinks/:id', (request, response) => {
 
 
 app.get('/drinks', (request, response) => {
-    response.render("drinks_index.ejs", {
-        allDrinks: drinks
+    response.render("drinks_show.ejs", {
+        allDrinks: drinks,
+        allFood: food
     })
 });
 
