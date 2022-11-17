@@ -27,7 +27,7 @@ img {
     <% const capDrink = drinkName.charAt(0).toUpperCase() + drinkName.slice(1) %>
       <li>
         <h2> <a href="/drinks/<%=i %> "><%=capDrink%></a></h2>
-        <img src="<%=drinkImg %>">
+        <img src="<%=drinkImg %>" width="300" height="300">
         <h3>$<%=drinkPrice %></h3>
       </li>
      <%  } %> 
@@ -43,7 +43,7 @@ img {
         <% const capFood = foodName.charAt(0).toUpperCase() + foodName.slice(1) %>
           <li>
             <h2> <a href="/food/<%=i %> "><%=capFood %></a></h2>
-            <img src="<%=foodImg %>">
+            <img src="<%=foodImg %> width="300" height="300"">
         <h3>$<%=foodPrice %></h3>
           </li>
          <%  } %> 
